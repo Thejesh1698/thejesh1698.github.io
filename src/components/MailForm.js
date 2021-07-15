@@ -1,17 +1,15 @@
 import React, {useEffect, useState} from "react";
-import Footer from "./Footer"
-import LandingPage from "./LandingPage";
-import DetailsPage from "./DetailsPage";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
-import coffeImage from "./../images/coffee.png"
 import CoffeeImageInMailForm from "./svgs/CoffeeImageInMailForm";
+import {send} from 'emailjs-com';
 
 function MailForm(props) {
 
     const [yourName, setYourName] = useState(undefined);
     const [yourEmail, setYourEmail] = useState(undefined);
     const [yourMessage, setYourMessage] = useState(undefined);
+    const [sendText, setSendText] = useState("Send");
 
     const sendMail = () => {
         if (yourName === undefined) {
@@ -27,7 +25,26 @@ function MailForm(props) {
         }
 
         if (yourName && yourEmail && yourMessage) {
-            console.log("sent");
+            setSendText("Hold on!");
+            send('contact_service', 'contact_form', {
+                "name": yourName,
+                "email": yourEmail,
+                "message": yourMessage
+            }, process.env.GATSBY_EMAILJS_USERID)
+                .then((result) => {
+                        setSendText("Sent!");
+                        setTimeout(() => {
+                            setSendText("Send");
+                            setYourName(undefined);
+                            setYourEmail(undefined);
+                            setYourMessage(undefined);
+                        }, 1500);
+                        console.log(result);
+                    },
+                    (error) => {
+                        setSendText("Send");
+                        console.log(error);
+                    });
         }
     }
 
@@ -60,7 +77,7 @@ function MailForm(props) {
                            }}
                     />
                     {yourName === undefined ? null : yourName ?
-                        <div className="input-success-info">Wow. That's a great name {yourName}! :)</div>
+                        <div className="input-success-info">Wow! &nbsp;That's a great name {yourName} :)</div>
                         :
                         <div className="input-error-info">I need a name to call you :/</div>
                     }
@@ -75,7 +92,7 @@ function MailForm(props) {
                            }}
                     />
                     {yourEmail === undefined ? null : validateEmail(yourEmail) ?
-                        <div className="input-success-info">Awesome. You got it correct this time! :)</div>
+                        <div className="input-success-info">Awesome! &nbsp;You got it correct this time :)</div>
                         :
                         <div className="input-error-info">I can't send a mail without a proper email id :/</div>
                     }
@@ -94,7 +111,7 @@ function MailForm(props) {
                     }
                 </div>
                 <div className="full-width coffee-send-div">
-                    <button onClick={sendMail}>Send!</button>
+                    <button onClick={sendMail}>{sendText}</button>
                 </div>
             </div>
         </div>

@@ -278,12 +278,14 @@ a {
   text-align: center;
   color: green;
   font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .input-error-info{
   text-align: center;
   color: #c12c2c;
   font-size: 0.8rem;
+  font-weight: 700;
 }
 /* -------------------Main css-------- */
 
@@ -375,11 +377,12 @@ a {
 
   .mail-form{
     width: 450px;
-    height: 600px;
+    height: 610px;
     border-radius: 0.8rem;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
     border: 1px solid #000000;
     padding: 97px 50px 0;
+    font-family: Recoleta, serif;
 
     &:before{
       background-color: rgba(255, 255, 255, 0.7);
@@ -389,7 +392,7 @@ a {
       left: 0;
       top: 0;
       width: 448px;
-      height: 598px;
+      height: 608px;
       border-radius: 0.8rem;
     }
 
@@ -425,7 +428,7 @@ a {
     }
 
     .coffee-input-info{
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       margin-bottom: 0.5rem;
       font-weight: bold;
       color: #30406a;
@@ -463,6 +466,7 @@ a {
         font-size: 1.2rem;
         background-color: #253253;
         color: white;
+        font-family: Pacifico, serif;
       }
     }
 

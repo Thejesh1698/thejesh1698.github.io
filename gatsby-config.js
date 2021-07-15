@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
     plugins: [
         "@fortawesome/fontawesome-svg-core",
@@ -17,6 +21,8 @@ module.exports = {
         "react-dom",
         "sass",
         "canvas",
+        "emailjs-com",
+        "dotenv",
         {
             resolve: `gatsby-source-filesystem`,
             options: {

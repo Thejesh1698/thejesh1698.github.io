@@ -18,7 +18,7 @@ not done: gmail in the footer is not linked. try to add modal with mailing optio
 not done: not mobile friendly page!
 not done: add "double click to select. Single click to expand folder" text under folder tree
 not done: make footer text change to scroll values dynamically
-not done: transfer coffee to footer
+not done: add pics of colleges
 
 
 done: go to google fonts, type some scratch and search, use the innovate symbols they give to show 404 error

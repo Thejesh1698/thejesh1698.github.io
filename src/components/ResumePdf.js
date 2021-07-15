@@ -36,8 +36,7 @@ function ResumePdf(props) {
                     }, 1000);
                 }
                 }>Download <FontAwesomeIcon icon={faTelegramPlane} className={downloadClicked ? "clicked" : ""}/>
-                    {/*<a style={{display: "none"}} href={resumePath} id='pdf-download-doc' download/>*/}
-                    <a style={{display: "none"}} href={resumePath} id='pdf-download-doc' target="_blank"/>
+                    <a style={{display: "none"}} href={resumePath} id='pdf-download-doc' download/>
                 </button>
                 <div className="page-controls">
                     <button type="button" className={pageNumber === 1 ? "disabled" : ""} onClick={() => {
