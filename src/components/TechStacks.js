@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState, useCallback} from "react";
 import {techStacks, prettifyDate} from "../assets/jsons/constants";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-function TechStacks() {
+const TechStacks = () => {
 
     const [currentTech, setCurrentTech] = useState(1);
     const [scrollDirection, setScrollDirection] = useState(true);  // true is right, false is left

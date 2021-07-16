@@ -1,27 +1,24 @@
-not done: have siri like waveform for loader design
-not done: add menu dot responsive on the top kind of siri thing
 done: check how to store number of people opened
 done: figure out good tag line for footer instead of made with love thing (We are stronger <u>nited than <div>ided)
 done: create mouse tracker effect like awdagency.com
-not done: try to give diagonal lines on landing page
-not done: give some delay when hover goes off on landing page
 done: show carousel kind of thing in editor
 done: show the projects like the cards in this https://css-tricks.com/
-not done: random facts about me. in loaders
-not done: make any letter in first page toggle till the user scrolls onto it
-not done: give border color like https://dribbble.com/shots/15144234-Binary-Converter-Darkmode for mystory div
-           (refer this https://css-tricks.com/almanac/properties/b/border-image/) (takes much time to do this)
 done (check again): incomplete "products_developed" under professional.js
 done: incomplete description under tech stacks
-not done(not requried for now): incomplete logos in tech stacks
-not done: gmail in the footer is not linked. try to add modal with mailing option!
-not done: not mobile friendly page!
-not done: add "double click to select. Single click to expand folder" text under folder tree
-not done: make footer text change to scroll values dynamically
-not done: add pics of colleges
-
-
+done: gmail in the footer is not linked. try to add modal with mailing option!
 done: go to google fonts, type some scratch and search, use the innovate symbols they give to show 404 error
 done: make dates dynamic (professional.js, techStacks.js)
-done: to deploy this react app in github pages
-                https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+done: to deploy this react app in github pages  https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+done: add "double click to select. Single click to expand folder" text under folder tree
+done: not mobile friendly page!
+
+not done: make footer text change to scroll values dynamically
+not done: add pics of colleges
+not done(not requried for now): random facts about me. in loaders
+not done(not requried for now): try to give diagonal lines on landing page
+not done(not requried for now): give some delay when hover goes off on landing page
+not done(not requried for now): make any letter in first page toggle till the user scrolls onto it
+not done(not requried for now): give border color like https://dribbble.com/shots/15144234-Binary-Converter-Darkmode for mystory div
+           (refer this https://css-tricks.com/almanac/properties/b/border-image/) (takes much time to do this)
+not done(not requried for now): incomplete logos in tech stacks
+

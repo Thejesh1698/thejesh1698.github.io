@@ -1,7 +1,7 @@
 import React from "react";
 import {prettifyDate} from "../assets/jsons/constants";
 
-function MyStory(props) {
+const MyStory = (props) => {
     return (
         <div className="my-story-wrapper full-box">
             <div className="my-story-main">

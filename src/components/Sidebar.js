@@ -1,10 +1,13 @@
 import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faChevronDown, faFolderOpen, faPencilAlt, faTrashAlt} from '@fortawesome/free-solid-svg-icons'
+import {
+    faChevronDown,
+    faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons'
 import getFolderTreeData from './../assets/jsons/FolderTreeData'
 import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
-function Sidebar(props) {
+const Sidebar = (props) => {
 
     const [openedNodes, setOpenedNodes] = useState([0, 1, 4, 10, 3]);
     const [FolderTreeData, setFolderTreeData] = useState(getFolderTreeData());
@@ -108,6 +111,10 @@ function Sidebar(props) {
 
                         return <>{tree_jsx}</>;
                     })()}
+                </div>
+                <div className="folder-tree-info">
+                    <div><FontAwesomeIcon icon={faInfoCircle}/> Single click to expand/collapse!</div>
+                    <div><FontAwesomeIcon icon={faInfoCircle}/> Double click to select!</div>
                 </div>
             </div>
         </div>

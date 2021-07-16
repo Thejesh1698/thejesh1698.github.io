@@ -1,6 +1,6 @@
 import React from "react";
 
-function Header() {
+const Header = () => {
     return (
         <div className="header-wrapper">
             <div className="header-main full-width full-height">

@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Sidebar from "./Sidebar"
 import Editor from "./Editor"
 
-function DetailsPage() {
+const DetailsPage = () => {
 
     const [currentTab, setCurrentTab] = useState(undefined);
     return (

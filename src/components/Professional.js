@@ -1,7 +1,7 @@
 import React from "react";
 import {internshipsPythonCode, scatterPythonCode, wintWealthPythonCode} from "../assets/jsons/constants";
 
-function Professional(props) {
+const Professional = (props) => {
     return (
         <div className="professional-tab-wrapper full-box">
             <div className="professional-tab-main full-box">

@@ -2,8 +2,7 @@ import React from 'react'
 import NotFoundAlien from "../components/svgs/NotFoundAlien";
 import {errorEmojis} from "../assets/jsons/constants";
 
-
-function NotFound(props) {
+const NotFound = (props) => {
 
     const emojiIndex = Math.floor(Math.random() * 10) % 9;
 

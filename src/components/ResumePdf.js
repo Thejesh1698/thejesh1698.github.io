@@ -7,7 +7,7 @@ import {faTelegramPlane} from "@fortawesome/free-brands-svg-icons";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function ResumePdf(props) {
+const ResumePdf = (props) => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [downloadClicked, setDownloadClicked] = useState(0);

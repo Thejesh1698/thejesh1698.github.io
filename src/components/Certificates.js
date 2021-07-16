@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import {certificatesDict, projectDict} from "../assets/jsons/constants";
+import {certificatesDict} from "../assets/jsons/constants";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-function Certificates(props) {
+const Certificates = () => {
 
     const [activeImage, setActiveImage] = useState({
         "Hacker Rank": "0",

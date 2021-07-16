@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from "react"
+import React from "react"
 import MainComponent from "../components/MainComponent";
 import './../css/style.scss'
 
-export default function Home() {
+const Home = () => {
   return (
       <MainComponent/>
   );
 }
+
+export  default Home;

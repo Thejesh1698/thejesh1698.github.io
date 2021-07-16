@@ -8,9 +8,8 @@ import {
     faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
-import {faCoffee, faTimes} from "@fortawesome/free-solid-svg-icons";
 
-function Footer(props) {
+const Footer = (props) => {
 
     const [letterT, setLetterT] = useState(false);
     const [letterH1, setLetterH1] = useState(false);

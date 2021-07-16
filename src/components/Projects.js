@@ -1,7 +1,7 @@
 import React from "react";
 import {projectDict} from "../assets/jsons/constants";
 
-function Projects() {
+const Projects = (props) => {
 
     return (
         <div className="projects-wrapper full-box">

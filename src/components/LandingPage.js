@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
-function LandingPage() {
+const LandingPage = () => {
     // useEffect(() => {
     //     window.addEventListener('mousedown', handleEvent)
     //

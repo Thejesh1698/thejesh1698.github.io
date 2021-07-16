@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
 import CoffeeImageInMailForm from "./svgs/CoffeeImageInMailForm";
 import {send} from 'emailjs-com';
 
-function MailForm(props) {
+const MailForm = (props) => {
 
     const [yourName, setYourName] = useState(undefined);
     const [yourEmail, setYourEmail] = useState(undefined);

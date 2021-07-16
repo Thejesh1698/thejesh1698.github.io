@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faChevronDown, faChevronUp} from "@fortawesome/free-solid-svg-icons";
 import RocketLoader from "./Loaders/RocketLoader";
 
-function University() {
+const University = () => {
 
     const [showFooter, setShowFooter] = useState(0);
     const [activeUniversity, setActiveUniversity] = useState(0);
