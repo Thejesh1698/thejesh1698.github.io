@@ -3,10 +3,9 @@ import Footer from "./Footer"
 import LandingPage from "./LandingPage";
 import DetailsPage from "./DetailsPage";
 import MailForm from "./MailForm";
-import {isMobile} from "react-device-detect";
 import MobileConstruction from "../pages/MobileConstruction";
 
-const MainComponent = () =>{
+const MainComponent = () => {
 
     const [tailLeft, setTailLeft] = useState(typeof window !== `undefined` ? window.innerWidth / 2 : 0);
     const [tailTop, setTailTop] = useState(typeof window !== `undefined` ? window.innerWidth / 2 : 0);
@@ -29,33 +28,33 @@ const MainComponent = () =>{
         }
     }, []);
 
-    console.log(isMobile);
     return (
         <>
-            {isMobile ? <MobileConstruction/> :
-                <>
-                    <div className="outer-body-wrapper">
-                        <div className="outer-wrapper">
-                            <div className="main-wrapper">
-                                {/*<Header/>*/}
-                                <LandingPage/>
-                                <div className="sidebar-editor-footer full-box">
-                                    <div className="sidebar-editor full-box">
-                                        <DetailsPage/>
+            {
+                typeof window !== 'undefined'
+                    ? window.innerWidth <= 1200 ? <MobileConstruction/>
+                    : <>
+                        <div className="outer-body-wrapper">
+                            <div className="outer-wrapper">
+                                <div className="main-wrapper">
+                                    {/*<Header/>*/}
+                                    <LandingPage/>
+                                    <div className="sidebar-editor-footer full-box">
+                                        <div className="sidebar-editor full-box">
+                                            <DetailsPage/>
+                                        </div>
+                                        <Footer setShowMailForm={setShowMailForm} showMailForm={showMailForm}/>
                                     </div>
-                                    <Footer setShowMailForm={setShowMailForm} showMailForm={showMailForm}/>
                                 </div>
                             </div>
+                            {showMailForm === 1 &&
+                            <MailForm setShowMailForm={setShowMailForm}/>
+                            }
                         </div>
-                        {showMailForm === 1 &&
-                        <MailForm setShowMailForm={setShowMailForm}/>
-                        }
-                    </div>
-                    <div className="mouseTail"
-                         style={{left: tailLeft + "px", top: tailTop + "px", opacity: tailOpacity}}/>
-                </>
+                        <div className="mouseTail"
+                             style={{left: tailLeft + "px", top: tailTop + "px", opacity: tailOpacity}}/>
+                    </> : null
             }
-
         </>
     );
 }

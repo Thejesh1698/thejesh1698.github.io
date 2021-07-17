@@ -23,7 +23,6 @@ module.exports = {
         "canvas",
         "emailjs-com",
         "dotenv",
-        "react-device-detect",
         {
             resolve: `gatsby-source-filesystem`,
             options: {
