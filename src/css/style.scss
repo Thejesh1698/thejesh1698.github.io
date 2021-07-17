@@ -6,11 +6,11 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, #ffc3a0  , #ffafbd );
+  background: linear-gradient(to right, #ffc3a0, #ffafbd);
   overflow: hidden;
   z-index: 50;
 
-  *{
+  * {
     z-index: 1;
   }
 }
@@ -22,7 +22,7 @@
   left: 45%;
   top: 58%;
   margin-left: -20px;
-  font-family: JetBrainsMonoItalic,serif;
+  font-family: JetBrainsMonoItalic, serif;
   font-size: 1rem;
 }
 
@@ -271,27 +271,28 @@ a {
   visibility: visible;
 }
 
-.green-border{
+.green-border {
   border: 2px solid green !important;
 }
 
-.red-border{
+.red-border {
   border: 2px solid red !important;
 }
 
-.input-success-info{
+.input-success-info {
   text-align: center;
   color: green;
   font-size: 0.8rem;
   font-weight: 700;
 }
 
-.input-error-info{
+.input-error-info {
   text-align: center;
   color: #c12c2c;
   font-size: 0.8rem;
   font-weight: 700;
 }
+
 /* -------------------Main css-------- */
 
 ::-webkit-scrollbar-track {
@@ -370,7 +371,7 @@ a {
   }
 }
 
-#mail-form-wrapper{
+#mail-form-wrapper {
   position: fixed;
   bottom: 5rem;
   width: 100%;
@@ -380,7 +381,7 @@ a {
   justify-content: center;
   z-index: 20;
 
-  .mail-form{
+  .mail-form {
     width: 450px;
     height: 610px;
     border-radius: 0.8rem;
@@ -389,7 +390,7 @@ a {
     padding: 97px 50px 0;
     font-family: Recoleta, serif;
 
-    &:before{
+    &:before {
       background-color: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
       content: '';
@@ -401,11 +402,11 @@ a {
       border-radius: 0.8rem;
     }
 
-    *{
+    * {
       z-index: 11;
     }
 
-    .coffee-close{
+    .coffee-close {
       position: absolute;
       right: 10px;
       top: 10px;
@@ -416,14 +417,15 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      &:hover{
+
+      &:hover {
         background-color: #253253;
         color: white;
         opacity: 0.5;
       }
     }
 
-    .coffee-header{
+    .coffee-header {
       color: #253253;
       font-size: 3rem;
       margin-bottom: 1rem;
@@ -432,37 +434,39 @@ a {
       padding-top: 10px;
     }
 
-    .coffee-input-info{
+    .coffee-input-info {
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
       font-weight: bold;
       color: #30406a;
     }
 
-    .coffee-input-div{
+    .coffee-input-div {
       border-radius: 1.5rem;
       margin-bottom: 0.8rem;
 
-      *{
+      * {
         border-radius: 1.5rem;
         outline: none;
         border: none;
       }
-      input{
+
+      input {
         height: 35px;
         padding: 2px 15px;
       }
 
-      textarea{
+      textarea {
         height: 120px;
         padding: 15px 15px;
         resize: none;
       }
     }
 
-    .coffee-send-div{
+    .coffee-send-div {
       text-align: center;
-      button{
+
+      button {
         width: 110px;
         height: 40px;
         border-radius: 1.5rem;
@@ -475,13 +479,14 @@ a {
       }
     }
 
-    .coffee-img-div{
+    .coffee-img-div {
       width: 90%;
       height: 20%;
       position: absolute;
       left: -5px;
       top: 10px;
-      svg{
+
+      svg {
         width: 50%;
         height: 100%;
       }
@@ -709,7 +714,7 @@ a {
   margin-top: 1rem;
 }
 
-.folder-tree-info{
+.folder-tree-info {
   font-size: 0.8rem;
   font-style: italic;
   //background-color: #ffb13f;
@@ -719,7 +724,8 @@ a {
   padding: 0.5rem 0;
   text-align: center;
   font-weight: bold;
-  div{
+
+  div {
     margin-bottom: 0.5rem;
   }
 }
@@ -1463,6 +1469,68 @@ a {
   padding: 2rem 0;
 }
 
+.resume-pdf-loader {
+  width: 595px;
+  height: 700px;
+  background-color: #391d41;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
+  border-radius: 8px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: 1fr 1fr 1fr;
+  color: #d75a78;
+
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .resume-loader-emoji{
+    align-items: flex-end;
+    font-family: DancingScript, serif;
+  }
+
+  .resume-loader-text{
+    align-items: flex-start;
+    font-family: KaushanScript, serif;
+    font-size: 1.5rem;
+  }
+
+  .resume-loader-pulse {
+    background-color: #d75a78;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .resume-loader-ring {
+      position: absolute;
+      background-color: inherit;
+      height: 100%;
+      width: 100%;
+      border-radius: 100%;
+      opacity: 0.8;
+      animation: pulsing 2s ease-out infinite;
+
+      &:nth-of-type(1) {
+        animation-delay: -0.5s;
+      }
+
+      &:nth-of-type(2) {
+        animation-delay: -1s;
+      }
+
+      &:nth-of-type(3) {
+        animation-delay: -1.5s;
+      }
+    }
+  }
+}
+
 .react-pdf__Document {
   box-shadow: rgba(0, 0, 0, 0.25) 0 54px 55px, rgba(0, 0, 0, 0.12) 0 -12px 30px, rgba(0, 0, 0, 0.12) 0 4px 6px, rgba(0, 0, 0, 0.17) 0 12px 13px, rgba(0, 0, 0, 0.09) 0 -3px 5px;
   border-radius: 8px;
@@ -1475,7 +1543,7 @@ a {
   border-radius: 8px;
 }
 
-.download-pdf{
+.download-pdf {
   position: relative;
   background-color: #391d41;
   width: 150px;
@@ -1489,20 +1557,20 @@ a {
   transition: all ease-in-out 0.3s;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
-  &:hover{
+  &:hover {
     background-color: #542b5f;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-    svg{
+    svg {
       transform: rotate(10deg);
     }
   }
 
-  svg{
+  svg {
     margin-left: 5px;
     font-size: 1.5rem;
 
-    &.clicked{
+    &.clicked {
       animation: pushOut 1s linear forwards;
     }
   }
@@ -1879,7 +1947,7 @@ a {
           //font-family: Recoleta, serif;
           font-family: DancingScript, serif;
 
-          .alien-error-tag{
+          .alien-error-tag {
             font-size: 1rem;
             background-color: #283255;
             opacity: 0.5;
@@ -1918,9 +1986,9 @@ a {
 
 
 /* --------mobile construction css-------------*/
-.mobile-construction-wrapper{
+.mobile-construction-wrapper {
 
-  .mobile-construction-main{
+  .mobile-construction-main {
 
     &.grid-wrapper {
       display: grid;
@@ -1928,27 +1996,27 @@ a {
       //align-items: center;
       //justify-items: center;
     }
-    
-    div{
+
+    div {
       text-align: center;
       font-family: OperatorMonoItalic, serif;
 
-      &.mobile-construction-img{
+      &.mobile-construction-img {
         padding: 2rem 0;
       }
 
-      &.mobile-construction-info{
+      &.mobile-construction-info {
         padding: 0 2rem;
       }
     }
 
-    svg{
+    svg {
       width: 100%;
       height: 100%;
       z-index: 0;
     }
 
-    p{
+    p {
 
     }
   }

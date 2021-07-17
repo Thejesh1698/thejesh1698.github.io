@@ -12,9 +12,10 @@ done: to deploy this react app in github pages  https://www.freecodecamp.org/new
 done: add "double click to select. Single click to expand folder" text under folder tree
 done: not mobile friendly page!
 done: make footer text change to scroll values dynamically
+done: fix on page loader
+done: resume loader
 
 not done: add pics of colleges
-not done: fix on page loader
 not done: change the font of footer my name dynamically
 not done(not requried for now): random facts about me. in loaders
 not done(not requried for now): try to give diagonal lines on landing page

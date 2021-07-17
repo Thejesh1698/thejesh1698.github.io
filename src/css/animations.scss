@@ -171,6 +171,13 @@
   }
 }
 
+@keyframes pulsing {
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
 
 // loader animations
 
