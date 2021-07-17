@@ -11,9 +11,11 @@ done: make dates dynamic (professional.js, techStacks.js)
 done: to deploy this react app in github pages  https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
 done: add "double click to select. Single click to expand folder" text under folder tree
 done: not mobile friendly page!
+done: make footer text change to scroll values dynamically
 
-not done: make footer text change to scroll values dynamically
 not done: add pics of colleges
+not done: fix on page loader
+not done: change the font of footer my name dynamically
 not done(not requried for now): random facts about me. in loaders
 not done(not requried for now): try to give diagonal lines on landing page
 not done(not requried for now): give some delay when hover goes off on landing page

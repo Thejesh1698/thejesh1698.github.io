@@ -33,7 +33,10 @@ const Footer = (props) => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY < 937) {
+            let baseValue = Math.max(document.body.scrollHeight, document.body.offsetHeight,
+                document.documentElement.clientHeight, document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight) - window.innerHeight - 77;
+            if (window.scrollY < (baseValue - (6 * 29))) {
                 if (letterT) {
                     setLetterT(false);
                 }
@@ -43,7 +46,7 @@ const Footer = (props) => {
                 }
             }
 
-            if (window.scrollY < 966) {
+            if (window.scrollY < (baseValue - (5 * 29))) {
                 if (letterH1) {
                     setLetterH1(false);
                 }
@@ -53,7 +56,7 @@ const Footer = (props) => {
                 }
             }
 
-            if (window.scrollY < 995) {
+            if (window.scrollY < (baseValue - (4 * 29))) {
                 if (letterE1) {
                     setLetterE1(false);
                 }
@@ -63,7 +66,7 @@ const Footer = (props) => {
                 }
             }
 
-            if (window.scrollY < 1024) {
+            if (window.scrollY < (baseValue - (3 * 29))) {
                 if (letterJ) {
                     setLetterJ(false);
                 }
@@ -73,7 +76,7 @@ const Footer = (props) => {
                 }
             }
 
-            if (window.scrollY < 1053) {
+            if (window.scrollY < (baseValue - (2 * 29))) {
                 if (letterE2) {
                     setLetterE2(false);
                 }
@@ -83,7 +86,7 @@ const Footer = (props) => {
                 }
             }
 
-            if (window.scrollY < 1082) {
+            if (window.scrollY < (baseValue - 29)) {
                 if (letterS) {
                     setLetterS(false);
                 }
@@ -93,7 +96,7 @@ const Footer = (props) => {
                 }
             }
 
-            if (window.scrollY < 1111) {
+            if (window.scrollY < baseValue) {
                 if (letterH2) {
                     setLetterH2(false);
                 }
@@ -138,7 +141,8 @@ const Footer = (props) => {
                                     <a href="https://github.com/Thejesh1698" className="github">
                                         <FontAwesomeIcon icon={faGithub}/>
                                     </a>
-                                    <div className="google" onClick={() => props.setShowMailForm(1-props.showMailForm)}>
+                                    <div className="google"
+                                         onClick={() => props.setShowMailForm(1 - props.showMailForm)}>
                                         <FontAwesomeIcon icon={faGoogle}/>
                                     </div>
                                     <a href="https://www.facebook.com/thejesh.mittu/" className="facebook">
