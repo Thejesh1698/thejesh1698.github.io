@@ -14,9 +14,10 @@ done: not mobile friendly page!
 done: make footer text change to scroll values dynamically
 done: fix on page loader
 done: resume loader
+done: scroll speed via trackpad
 
 not done: add pics of colleges
-not done: change the font of footer my name dynamically
+not done: fix number of visited users. probably have a good backned. try hikaru
 not done(not requried for now): random facts about me. in loaders
 not done(not requried for now): try to give diagonal lines on landing page
 not done(not requried for now): give some delay when hover goes off on landing page

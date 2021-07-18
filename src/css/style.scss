@@ -477,6 +477,22 @@ a {
         color: white;
         font-family: Pacifico, serif;
       }
+
+      &.success{
+        button {
+          border: 1px solid green;
+          background-color: lightgreen;
+          color: green;
+        }
+      }
+
+      &.error{
+        button {
+          border: 1px solid red;
+          background-color: lightcoral;
+          color: red;
+        }
+      }
     }
 
     .coffee-img-div {
@@ -715,10 +731,10 @@ a {
 }
 
 .folder-tree-info {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-style: italic;
   //background-color: #ffb13f;
-  width: 80%;
+  width: 100%;
   border-radius: 0.3rem;
   margin: 3rem auto 0;
   padding: 0.5rem 0;
@@ -747,6 +763,10 @@ a {
   border-bottom-right-radius: 0.3rem;
   cursor: pointer;
   margin-bottom: 1rem;
+
+  *{
+    cursor: pointer !important;
+  }
 }
 
 .tree-node.display-none {
@@ -862,9 +882,9 @@ a {
   justify-content: center;
   align-items: center;
   font-size: 10rem;
-  font-family: KaushanScript, serif;
   padding-top: 10%;
   color: #000831;
+  font-family: KaushanScript, serif;
 }
 
 .footer-info {
@@ -915,6 +935,23 @@ a {
   color: #fd154b;
   font-size: 1.5rem;
   padding: 0.1rem;
+}
+
+.footer-social-links .google{
+  font-size: 1.8rem;
+
+  &:before{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-image: url("./../images/shines.png");
+    background-size: 0.7rem 0.7rem;
+    background-repeat: no-repeat;
+    right: -5px;
+    top: -2px;
+  }
 }
 
 .footer-social-links a.linked-in:hover, .footer-social-links .footer-social-links .google.linked-in:hover {

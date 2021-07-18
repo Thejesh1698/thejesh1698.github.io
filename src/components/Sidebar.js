@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {
-    faChevronDown,
+    faChevronDown, faFolder,
     faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons'
 import getFolderTreeData from './../assets/jsons/FolderTreeData'
@@ -9,17 +9,17 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 const Sidebar = (props) => {
 
-    const [openedNodes, setOpenedNodes] = useState([0, 1, 4, 10, 3]);
+    const [openedNodes, setOpenedNodes] = useState([0, 10, 3]);
     const [FolderTreeData, setFolderTreeData] = useState(getFolderTreeData());
     const [currentNode, setCurrentNode] = useState(0);
 
-    useEffect(()=>{
+    useEffect(() => {
         setCurrentNode(2);
         props.setCurrentTab(FolderTreeData[2].key);
     }, [])
 
     const treeNodeSelect = (node_id, file_type) => {
-        if(file_type !== "folder"){
+        if (file_type !== "folder") {
             setCurrentNode(node_id);
             props.setCurrentTab(FolderTreeData[node_id].key);
         }
@@ -81,9 +81,13 @@ const Sidebar = (props) => {
                                                                           "visibility-hidden" : "")}/>
                                             </div>
                                             <div>
-                                                <FontAwesomeIcon icon={FolderTreeData[current_id].font_awesome_icon}
-                                                                 className={"node-thumbnail full-box " + (
-                                                                     currentNode === current_id ? "active" : "")}/>
+                                                {FolderTreeData[current_id].file_type === "folder" && !openedNodes.includes(current_id) ?
+                                                    <FontAwesomeIcon icon={faFolder}
+                                                                     className={"node-thumbnail full-box " + (
+                                                                         currentNode === current_id ? "active" : "")}/> :
+                                                    <FontAwesomeIcon icon={FolderTreeData[current_id].font_awesome_icon}
+                                                                     className={"node-thumbnail full-box " + (
+                                                                         currentNode === current_id ? "active" : "")}/>}
                                             </div>
                                             <div
                                                 className={"node-name full-height " + (
@@ -113,8 +117,8 @@ const Sidebar = (props) => {
                     })()}
                 </div>
                 <div className="folder-tree-info">
-                    <div><FontAwesomeIcon icon={faInfoCircle}/> Single click to expand/collapse!</div>
-                    <div><FontAwesomeIcon icon={faInfoCircle}/> Double click to select!</div>
+                    <div><FontAwesomeIcon icon={faInfoCircle}/> Single click to expand/collapse a folder!</div>
+                    <div><FontAwesomeIcon icon={faInfoCircle}/> Double click to select a file!</div>
                 </div>
             </div>
         </div>

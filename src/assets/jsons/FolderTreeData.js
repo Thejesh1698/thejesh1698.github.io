@@ -25,7 +25,7 @@ const FolderTreeData = {
     },
     2: {
         "key": "techStacks",
-        "displayName": "techStacks()",
+        "displayName": "technicalSkills()",
         "parent": 0,
         "file_type": "react",
         "font_awesome_icon": faReact,

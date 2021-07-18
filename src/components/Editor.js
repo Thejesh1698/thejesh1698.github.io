@@ -9,7 +9,7 @@ import MyStory from "./MyStory";
 
 const Editor = (props) => {
     const components_dict = {
-        "techStacks" : <TechStacks/>,
+        "techStacks" : <TechStacks isUsingTrackpad={props.isUsingTrackpad}/>,
         "projects": <Projects/>,
         "university": <University/>,
         "resumePdf": <ResumePdf/>,

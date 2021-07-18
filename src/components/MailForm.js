@@ -110,7 +110,9 @@ const MailForm = (props) => {
                         <div className="input-error-info">We need something to talk right? :/</div>
                     }
                 </div>
-                <div className="full-width coffee-send-div">
+                <div
+                        className={"full-width coffee-send-div " + (sendText === "Sent" ? "success" :
+                        sendText === "Send" ? "" : "error")}>
                     <button onClick={sendMail}>{sendText}</button>
                 </div>
             </div>

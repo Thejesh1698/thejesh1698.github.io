@@ -11,6 +11,7 @@ const MainComponent = () => {
     const [tailTop, setTailTop] = useState(typeof window !== `undefined` ? window.innerWidth / 2 : 0);
     const [tailOpacity, setTailOpacity] = useState(0);
     const [showMailForm, setShowMailForm] = useState(0);
+    const [isUsingTrackpad, setIsUsingTrackpad] = useState(true);
 
     const moveTail = (e) => {
         setTailLeft(e.pageX + 5);
@@ -18,12 +19,33 @@ const MainComponent = () => {
         setTailOpacity(1);
     }
 
+    const detectTrackPad = (e) => {
+        let isTrackpad = false;
+        if (e.wheelDeltaY) {
+            if (e.wheelDeltaY === (e.deltaY * -3)) {
+                isTrackpad = true;
+            }
+        }
+        else if (e.deltaMode === 0) {
+            isTrackpad = true;
+        }
+        if(isTrackpad){
+            window.removeEventListener('mousewheel', detectTrackPad)
+            window.removeEventListener('DOMMouseScroll', detectTrackPad)
+        }
+        setIsUsingTrackpad(isTrackpad);
+    }
+
     useEffect(() => {
         if (typeof window !== `undefined`) {
             window.addEventListener('mousemove', moveTail)
+            window.addEventListener("mousewheel", detectTrackPad, false);
+            window.addEventListener("DOMMouseScroll", detectTrackPad, false);
 
             return () => {
                 window.removeEventListener('mousemove', moveTail)
+                window.removeEventListener('mousewheel', detectTrackPad)
+                window.removeEventListener('DOMMouseScroll', detectTrackPad)
             }
         }
     }, []);
@@ -41,7 +63,7 @@ const MainComponent = () => {
                                     <LandingPage/>
                                     <div className="sidebar-editor-footer full-box">
                                         <div className="sidebar-editor full-box">
-                                            <DetailsPage/>
+                                            <DetailsPage isUsingTrackpad={isUsingTrackpad}/>
                                         </div>
                                         <Footer setShowMailForm={setShowMailForm} showMailForm={showMailForm}/>
                                     </div>

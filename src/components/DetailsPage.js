@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import Sidebar from "./Sidebar"
 import Editor from "./Editor"
 
-const DetailsPage = () => {
+const DetailsPage = (props) => {
 
     const [currentTab, setCurrentTab] = useState(undefined);
     return (
         <>
             <Sidebar setCurrentTab={setCurrentTab}/>
-            <Editor currentTab={currentTab}/>
+            <Editor currentTab={currentTab} isUsingTrackpad={props.isUsingTrackpad}/>
         </>
     );
 }

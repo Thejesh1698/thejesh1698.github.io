@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState, useCallback} from "react";
 import {techStacks, prettifyDate} from "../assets/jsons/constants";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-const TechStacks = () => {
+const TechStacks = (props) => {
 
     const [currentTech, setCurrentTech] = useState(1);
     const [scrollDirection, setScrollDirection] = useState(true);  // true is right, false is left
@@ -16,6 +16,11 @@ const TechStacks = () => {
         }
     }, []);
     // const [hoveredStack, setHoveredStack] = useState({});
+    const [scrollDownUnit, setScrollDownUnit] = useState(0);
+    const scrollDownUnitRef = React.useRef(scrollDownUnit);
+    const [scrollUpUnit, setScrollUpUnit] = useState(0);
+    const scrollUpUnitRef = React.useRef(scrollUpUnit);
+    const isUsingTouchPadRef = React.useRef(props.isUsingTrackpad);
 
     useEffect(() => {
         carouselGroupRef.current.addEventListener('wheel', carouselScroll);
@@ -27,23 +32,52 @@ const TechStacks = () => {
         // }
     }, []);
 
+    useEffect(() => {
+        isUsingTouchPadRef.current = props.isUsingTrackpad;
+    }, [props.isUsingTrackpad]);
+
     let touchStartX = 0;
 
     const carouselScroll = (event) => {
         event.preventDefault();
         if (event.wheelDelta >= 0) { // 'Scroll up'
             if (currentTechRef.current > 1) {
-                carouselScrollUp();
+                if(isUsingTouchPadRef.current){
+                    scrollUpUnitRef.current = scrollUpUnitRef.current + 1;
+                    if(scrollUpUnitRef.current === 20){
+                        carouselScrollUp();
+                        scrollUpUnitRef.current = 0;
+                        setScrollUpUnit(scrollUpUnitRef.current);
+                    }
+                    else{
+                        setScrollUpUnit(scrollUpUnitRef.current);
+                    }
+                }
+                else{
+                    carouselScrollUp();
+                }
             }
         } else { // 'Scroll down'
             if (currentTechRef.current < 11) {
-                carouselScrollDown();
+                if(isUsingTouchPadRef.current){
+                    scrollDownUnitRef.current = scrollDownUnitRef.current - 1;
+                    if(scrollDownUnitRef.current === -20){
+                        carouselScrollDown();
+                        scrollDownUnitRef.current = 0;
+                        setScrollDownUnit(scrollDownUnitRef.current);
+                    }
+                    else{
+                        setScrollDownUnit(scrollDownUnitRef.current);
+                    }
+                }
+                else{
+                    carouselScrollDown();
+                }
             }
         }
     }
 
     const touchPadScrollStart = (event) => {
-        console.log("touch-start");
         event.preventDefault();
         touchStartX = event.changedTouches[0].screenX;
     }

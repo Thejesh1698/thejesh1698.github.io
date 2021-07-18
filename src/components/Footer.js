@@ -8,6 +8,7 @@ import {
     faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
+import {fontFamiliesDict} from "../assets/jsons/constants";
 
 const Footer = (props) => {
 
