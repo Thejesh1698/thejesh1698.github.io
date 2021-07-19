@@ -25,6 +25,7 @@
     "dotenv": "^10.0.0",
     "emailjs-com": "^3.2.0",
     "gatsby": "^3.8.1",
+    "gatsby-plugin-apollo": "^3.0.2",
     "gatsby-plugin-sass": "^4.8.0",
     "gatsby-source-filesystem": "^3.9.0",
     "gatsby-source-graphql": "^3.9.0",

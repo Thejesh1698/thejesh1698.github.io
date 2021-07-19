@@ -39,5 +39,11 @@ module.exports = {
                 ignore: [`**/\.*`], // ignore files starting with a dot
             },
         },
+        {
+            resolve: 'gatsby-plugin-apollo',
+            options: {
+                uri: process.env.GATSBY_HASURA_GRAPHQL_URL
+            }
+        }
     ],
 }
