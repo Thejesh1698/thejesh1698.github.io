@@ -4,6 +4,16 @@ import LandingPage from "./LandingPage";
 import DetailsPage from "./DetailsPage";
 import MailForm from "./MailForm";
 import MobileConstruction from "../pages/MobileConstruction";
+import { ApolloProvider } from "@apollo/client";
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+
+const client = new ApolloClient({
+    cache: new InMemoryCache(),
+    link: new HttpLink({
+        uri: process.env.GATSBY_HASURA_GRAPHQL_URL,
+        headers: {'content-type' : 'application/json', 'x-hasura-admin-secret': process.env.GATSBY_HASURA_ADMIN_SECRET},
+    }),
+});
 
 const MainComponent = () => {
 
@@ -65,7 +75,9 @@ const MainComponent = () => {
                                         <div className="sidebar-editor full-box">
                                             <DetailsPage isUsingTrackpad={isUsingTrackpad}/>
                                         </div>
-                                        <Footer setShowMailForm={setShowMailForm} showMailForm={showMailForm}/>
+                                        <ApolloProvider client={client}>
+                                            <Footer setShowMailForm={setShowMailForm} showMailForm={showMailForm}/>
+                                        </ApolloProvider>
                                     </div>
                                 </div>
                             </div>

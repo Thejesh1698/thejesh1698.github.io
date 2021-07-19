@@ -8,9 +8,36 @@ import {
     faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
-import {fontFamiliesDict} from "../assets/jsons/constants";
+import {useQuery, gql, useMutation} from "@apollo/client";
 
-const Footer = (props) => {
+const ADD_IPADDRESS = gql`
+  mutation ($ipaddress: String!) {
+     insert_ipaddresses(
+        objects:[{
+          ipaddress: $ipaddress
+        }]
+      )
+      {
+        returning{
+          id
+        }
+      }
+  }
+`;
+
+const GET_IPADDRESSES = gql`
+   {
+  ipaddresses {
+    id
+  }
+}
+`;
+
+const Footer = ({showMailForm, setShowMailForm}) => {
+
+
+    const [addIpaddress, {data1}] = useMutation(ADD_IPADDRESS);
+     const {loading, error, data} = useQuery(GET_IPADDRESSES);
 
     const [letterT, setLetterT] = useState(false);
     const [letterH1, setLetterH1] = useState(false);
@@ -19,17 +46,17 @@ const Footer = (props) => {
     const [letterE2, setLetterE2] = useState(false);
     const [letterS, setLetterS] = useState(false);
     const [letterH2, setLetterH2] = useState(false);
-    const [userTracker, setUserTracker] = useState(0);
+    const [userTracker, setUserTracker] = useState("");
 
     useEffect(() => {
-        getVisitorCount();
+        getVisitorCount()
     }, []);
 
     const getVisitorCount = async () => {
         await axios.get("https://website-visits-counter.glitch.me/visitorCount").then((response) => {
             setUserTracker(response.data)
-        }).catch((error) => {
-        });
+            addIpaddress({variables: {ipaddress: response.data}}).then(response =>{}).catch(error=>{});
+        }).catch((error) => {});
     }
 
     useEffect(() => {
@@ -143,7 +170,7 @@ const Footer = (props) => {
                                         <FontAwesomeIcon icon={faGithub}/>
                                     </a>
                                     <div className="google"
-                                         onClick={() => props.setShowMailForm(1 - props.showMailForm)}>
+                                         onClick={() => setShowMailForm(1 - showMailForm)}>
                                         <FontAwesomeIcon icon={faGoogle}/>
                                     </div>
                                     <a href="https://www.facebook.com/thejesh.mittu/" className="facebook">
@@ -155,7 +182,7 @@ const Footer = (props) => {
                                 </div>
                             </div>
                             <div
-                                className="footer-feet-right"> {userTracker} {userTracker === 1 ?
+                                className="footer-feet-right"> {data !== undefined ? data.ipaddresses.length : 0} {data !== undefined && data.ipaddresses.length === 1 ?
                                 "human left his/her footprint here !" : "humans left their footprints here !"}
                             </div>
                         </div>
@@ -167,4 +194,3 @@ const Footer = (props) => {
 }
 
 export default Footer;
-

@@ -23,6 +23,7 @@ module.exports = {
         "canvas",
         "emailjs-com",
         "dotenv",
+        "@apollo/client",
         {
             resolve: `gatsby-source-filesystem`,
             options: {

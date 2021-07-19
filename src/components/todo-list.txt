@@ -15,9 +15,12 @@ done: make footer text change to scroll values dynamically
 done: fix on page loader
 done: resume loader
 done: scroll speed via trackpad
+done: increase the width of blocks in professional.py
+done: fix number of visited users. probably have a good backend or try hasura
 
 not done: add pics of colleges
-not done: fix number of visited users. probably have a good backned. try hikaru
+
+not done: description in acheievements
 not done(not requried for now): random facts about me. in loaders
 not done(not requried for now): try to give diagonal lines on landing page
 not done(not requried for now): give some delay when hover goes off on landing page
