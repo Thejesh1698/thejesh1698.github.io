@@ -9,7 +9,7 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 const Sidebar = (props) => {
 
-    const [openedNodes, setOpenedNodes] = useState([0, 10, 3]);
+    const [openedNodes, setOpenedNodes] = useState([0,1, 10, 3]);
     const [FolderTreeData, setFolderTreeData] = useState(getFolderTreeData());
     const [currentNode, setCurrentNode] = useState(0);
 

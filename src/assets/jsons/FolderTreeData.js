@@ -13,7 +13,7 @@ const FolderTreeData = {
         "parent": "-1",
         "file_type": "folder",
         "font_awesome_icon": faFolderOpen,
-        "children": [1, 2, 4, 10, 3],
+        "children": [1, 4, 10, 3],
     },
     1: {
         "key": "portfolio",
@@ -21,12 +21,12 @@ const FolderTreeData = {
         "parent": 0,
         "file_type": "folder",
         "font_awesome_icon": faFolderOpen,
-        "children": [6],
+        "children": [6, 2],
     },
     2: {
         "key": "techStacks",
         "displayName": "technicalSkills()",
-        "parent": 0,
+        "parent": 1,
         "file_type": "react",
         "font_awesome_icon": faReact,
         "children": [],
