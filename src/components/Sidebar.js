@@ -59,51 +59,47 @@ const Sidebar = (props) => {
                         function treeTraversal(current_id, level) {
                             if (current_id !== 0) {
                                 tree_jsx = <>{tree_jsx}
-                                    <OverlayTrigger overlay={<Tooltip
-                                        id="tooltip-dbclick" className={current_id !== 1 ? "display-none" : ""}>
-                                        Double click to select!</Tooltip>} delay={300}>
-                                        <div
-                                            className={"tree-node parent-node " + (
-                                                !openedNodes.includes(parseInt(FolderTreeData[current_id].parent))
-                                                    ? "display-none" : "visible-node")}
-                                            onClick={() => {
-                                                treeNodeClick(current_id);
-                                            }}
-                                            onDoubleClick={() => {
-                                                treeNodeSelect(current_id, FolderTreeData[current_id].file_type)
-                                            }
-                                            }
-                                            style={{paddingLeft: level * (1) + "rem"}}>
-                                            <div><FontAwesomeIcon icon={faChevronDown}
-                                                                  className={"node-toggle-icon full-box " + (
-                                                                      !openedNodes.includes(current_id) ? "closed " : "") + (
-                                                                      FolderTreeData[current_id].children.length === 0 ?
-                                                                          "visibility-hidden" : "")}/>
-                                            </div>
-                                            <div>
-                                                {FolderTreeData[current_id].file_type === "folder" && !openedNodes.includes(current_id) ?
-                                                    <FontAwesomeIcon icon={faFolder}
-                                                                     className={"node-thumbnail full-box " + (
-                                                                         currentNode === current_id ? "active" : "")}/> :
-                                                    <FontAwesomeIcon icon={FolderTreeData[current_id].font_awesome_icon}
-                                                                     className={"node-thumbnail full-box " + (
-                                                                         currentNode === current_id ? "active" : "")}/>}
-                                            </div>
-                                            <div
-                                                className={"node-name full-height " + (
-                                                    currentNode === current_id ? "active" : "")}>
-                                                {FolderTreeData[current_id].displayName}
-                                            </div>
-                                            {/*<div className={"node-edit full-height " + (*/}
-                                            {/*    currentNode === current_id ? "active" : "")}>*/}
-                                            {/*    <FontAwesomeIcon icon={faPencilAlt}/>*/}
-                                            {/*</div>*/}
-                                            {/*<div className={"node-delete full-height " + (*/}
-                                            {/*    currentNode === current_id ? "active" : "")}>*/}
-                                            {/*    <FontAwesomeIcon icon={faTrashAlt}/>*/}
-                                            {/*</div>*/}
+                                    <div
+                                        className={"tree-node parent-node " + (
+                                            !openedNodes.includes(parseInt(FolderTreeData[current_id].parent))
+                                                ? "display-none" : "visible-node")}
+                                        onClick={() => {
+                                            treeNodeClick(current_id);
+                                        }}
+                                        onDoubleClick={() => {
+                                            treeNodeSelect(current_id, FolderTreeData[current_id].file_type)
+                                        }
+                                        }
+                                        style={{paddingLeft: level * (1) + "rem"}}>
+                                        <div><FontAwesomeIcon icon={faChevronDown}
+                                                              className={"node-toggle-icon full-box " + (
+                                                                  !openedNodes.includes(current_id) ? "closed " : "") + (
+                                                                  FolderTreeData[current_id].children.length === 0 ?
+                                                                      "visibility-hidden" : "")}/>
                                         </div>
-                                    </OverlayTrigger>
+                                        <div>
+                                            {FolderTreeData[current_id].file_type === "folder" && !openedNodes.includes(current_id) ?
+                                                <FontAwesomeIcon icon={faFolder}
+                                                                 className={"node-thumbnail full-box " + (
+                                                                     currentNode === current_id ? "active" : "")}/> :
+                                                <FontAwesomeIcon icon={FolderTreeData[current_id].font_awesome_icon}
+                                                                 className={"node-thumbnail full-box " + (
+                                                                     currentNode === current_id ? "active" : "")}/>}
+                                        </div>
+                                        <div
+                                            className={"node-name full-height " + (
+                                                currentNode === current_id ? "active" : "")}>
+                                            {FolderTreeData[current_id].displayName}
+                                        </div>
+                                        {/*<div className={"node-edit full-height " + (*/}
+                                        {/*    currentNode === current_id ? "active" : "")}>*/}
+                                        {/*    <FontAwesomeIcon icon={faPencilAlt}/>*/}
+                                        {/*</div>*/}
+                                        {/*<div className={"node-delete full-height " + (*/}
+                                        {/*    currentNode === current_id ? "active" : "")}>*/}
+                                        {/*    <FontAwesomeIcon icon={faTrashAlt}/>*/}
+                                        {/*</div>*/}
+                                    </div>
                                 </>
                             }
                             for (let node in FolderTreeData[current_id].children) {

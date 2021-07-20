@@ -19,8 +19,13 @@ const Certificates = () => {
                 for (let obj in certificatesDict[value]) {
                     local_jsx = <>{local_jsx}
                         <div className={"certificates-item " + (activeImage[value] === obj ? "active" : "")}
-                             style={{backgroundImage: `url(${certificatesDict[value][obj].url})`,
-                             backgroundPosition: value === 'Coursera' ? "center" : "left"}}
+                             style={{
+                                 backgroundImage: activeImage[value] === obj ?
+                                     `url(${certificatesDict[value][obj].url})` :
+                                     `linear-gradient(to bottom, ${certificatesDict[value][obj].primaryColor}, 
+                                     ${certificatesDict[value][obj].secondaryColor})`,
+                                 backgroundPosition: value === 'Coursera' ? "center" : "left"
+                             }}
                              key={value + obj}
                              onClick={(e) => {
                                  let local_var = {...activeImage};

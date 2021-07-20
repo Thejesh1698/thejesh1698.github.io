@@ -1,4 +1,4 @@
-import {faDatabase, faImage, faRobot} from "@fortawesome/free-solid-svg-icons";
+import {faDatabase, faImage, faPuzzlePiece, faRobot} from "@fortawesome/free-solid-svg-icons";
 import {faCss3, faGit, faHtml5, faJava, faJs, faPagelines, faPython, faReact} from "@fortawesome/free-brands-svg-icons";
 import HackerRankJava from "./../../images/certificate_hacker_rank_java.png"
 import HackerRankProblemSolving from "./../../images/certificate_hacker_rank_problem_solving.png"
@@ -212,41 +212,55 @@ export const certificatesDict = {
         {
             "url": ScatterTopGun,
             "icon": faImage,
-            "color": "#ff0005"
+            "color": "#ff0005",
+            "primaryColor": "#642B73",
+            "secondaryColor": "#C6426E"
         }
     ],
     "Hacker Rank": [
         {
             "url": HackerRankProblemSolving,
-            "icon": faDatabase,
-            "color": "#00ccff"
+            "icon": faPuzzlePiece,
+            "color": "#00ccff",
+            "primaryColor": "#4e4376",
+            "secondaryColor": "#4e4376"
         },
         {
             "url": HackerRankJava,
             "icon": faJava,
-            "color": "#8600ff"
+            "color": "#8600ff",
+            "primaryColor": "#42275a",
+            "secondaryColor": "#b21f1f"
         },
         {
             "url": HackerRankSQL,
             "icon": faDatabase,
-            "color": "#aa606d"
+            "color": "#aa606d",
+            "primaryColor": "#A83279",
+            "secondaryColor": "#73C8A9"
         },
     ],
     "Coursera": [
         {
             "url": CourseraJavaOops,
             "icon": faJava,
-            "color": "#1234aa"
+            "color": "#1234aa",
+            "primaryColor": "#556270",
+            "secondaryColor": "#4ecdc4"
         },
         {
             "url": CourseraMachineLearning,
             "icon": faRobot,
-            "color": "#1234aa"
+            "color": "#1234aa",
+            "primaryColor": "#d53369",
+            "secondaryColor": "#cbad6d"
         },
         {
             "url": CourseraDeepLearning,
             "icon": faImage,
-            "color": "#1234aa"
+            "color": "#1234aa",
+            "primaryColor": "#606c88",
+            "secondaryColor": "#4b1248"
         }
     ],
     // "Examly.io": [
