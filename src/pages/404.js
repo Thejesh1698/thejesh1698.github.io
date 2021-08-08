@@ -1,10 +1,10 @@
-import React from 'react'
+import React  from "react"
 import NotFoundAlien from "../components/svgs/NotFoundAlien";
 import {errorEmojis} from "../assets/jsons/constants";
 
 const NotFound = (props) => {
 
-    const emojiIndex = Math.floor(Math.random() * 10) % 9;
+    const emojiIndex = 0;
 
     return (
         <div className="alien-outer-wrapper full-box">

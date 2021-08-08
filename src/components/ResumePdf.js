@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useEffect, useState } from "react"
 import {Document, Page, pdfjs} from 'react-pdf/dist/umd/entry.webpack';
 import resumePath from "../assets/docs/resume.pdf"
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
@@ -12,12 +12,18 @@ const ResumePdf = (props) => {
     const [numPages, setNumPages] = useState(null);
     const [pageNumber, setPageNumber] = useState(1);
     const [downloadClicked, setDownloadClicked] = useState(0);
+    const [filePath, setFilePath] = useState("dsfgdsf");
+    const [emojiIndex, setEmojiIndex] = useState(Math.floor(Math.random() * 10) % 9);
 
     const onDocumentLoadSuccess = ({numPages}) => {
         setNumPages(numPages);
     }
 
-    const emojiIndex = Math.floor(Math.random() * 10) % 9;
+    useEffect(()=>{
+        setTimeout(()=>{
+            setFilePath(resumePath);
+        }, 1000);
+    }, [])
 
     const initialLoader = <>
         <div className="resume-pdf-loader">
@@ -33,7 +39,7 @@ const ResumePdf = (props) => {
                 </div>
             </div>
             <div className="resume-loader-text full-width">
-                The bits are flowing slowly today!
+                The bits are flowing slowly today! Please hold on for a sec
             </div>
         </div>
     </>;
@@ -42,9 +48,10 @@ const ResumePdf = (props) => {
         <div className="resume-pdf-wrapper">
             <div className="resume-pdf-main">
                 <Document
-                    file={resumePath}
+                    file={filePath}
                     onLoadSuccess={onDocumentLoadSuccess}
                     loading={initialLoader}
+                    error={initialLoader}
                 >
                     <Page pageNumber={pageNumber}/>
                 </Document>

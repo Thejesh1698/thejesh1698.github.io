@@ -1512,6 +1512,10 @@ a {
   padding: 2rem 0;
 }
 
+.react-pdf__Document{
+  animation: fadeIn 0.5s linear alternate forwards;
+}
+
 .resume-pdf-loader {
   width: 595px;
   height: 700px;
