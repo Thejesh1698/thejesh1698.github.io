@@ -9,7 +9,7 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 const Sidebar = (props) => {
 
-    const [openedNodes, setOpenedNodes] = useState([0,1, 10, 3]);
+    const [openedNodes, setOpenedNodes] = useState([0,1, 3]);
     const [FolderTreeData, setFolderTreeData] = useState(getFolderTreeData());
     const [currentNode, setCurrentNode] = useState(0);
 
@@ -51,7 +51,7 @@ const Sidebar = (props) => {
     return (
         <div className="sidebar-wrapper">
             <div className="sidebar-main full-box">
-                {/*<div className="sidebar-header text-not-selectable">&#60; Code Editor /&#62;</div>*/}
+                {/*<div className="sidebar-header text-not-selectable">&#60; Portfolio Tree /&#62;</div>*/}
                 <div className="folder-tree">
                     {(() => {
                         let tree_jsx = <></>;
@@ -62,7 +62,7 @@ const Sidebar = (props) => {
                                     <div
                                         className={"tree-node parent-node " + (
                                             !openedNodes.includes(parseInt(FolderTreeData[current_id].parent))
-                                                ? "display-none" : "visible-node")}
+                                                ? "display-none " : "visible-node ") + (currentNode === current_id ? "clicked" : "")}
                                         onClick={() => {
                                             treeNodeClick(current_id);
                                         }}
@@ -91,14 +91,6 @@ const Sidebar = (props) => {
                                                 currentNode === current_id ? "active" : "")}>
                                             {FolderTreeData[current_id].displayName}
                                         </div>
-                                        {/*<div className={"node-edit full-height " + (*/}
-                                        {/*    currentNode === current_id ? "active" : "")}>*/}
-                                        {/*    <FontAwesomeIcon icon={faPencilAlt}/>*/}
-                                        {/*</div>*/}
-                                        {/*<div className={"node-delete full-height " + (*/}
-                                        {/*    currentNode === current_id ? "active" : "")}>*/}
-                                        {/*    <FontAwesomeIcon icon={faTrashAlt}/>*/}
-                                        {/*</div>*/}
                                     </div>
                                 </>
                             }
