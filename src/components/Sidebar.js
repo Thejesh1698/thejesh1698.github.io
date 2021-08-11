@@ -9,13 +9,13 @@ import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 const Sidebar = (props) => {
 
-    const [openedNodes, setOpenedNodes] = useState([0,1, 3]);
+    const [openedNodes, setOpenedNodes] = useState([0,4, 3]);
     const [FolderTreeData, setFolderTreeData] = useState(getFolderTreeData());
     const [currentNode, setCurrentNode] = useState(0);
 
     useEffect(() => {
-        setCurrentNode(2);
-        props.setCurrentTab(FolderTreeData[2].key);
+        setCurrentNode(12);
+        props.setCurrentTab(FolderTreeData[12].key);
     }, [])
 
     const treeNodeSelect = (node_id, file_type) => {
