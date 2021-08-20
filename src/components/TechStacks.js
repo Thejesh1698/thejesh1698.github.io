@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const TechStacks = (props) => {
 
-    const [currentTech, setCurrentTech] = useState(1);
+    const [currentTech, setCurrentTech] = useState(7);
     const [scrollDirection, setScrollDirection] = useState(true);  // true is right, false is left
     const carouselGroupRef = useRef(null);
     const currentTechRef = React.useRef(currentTech);
@@ -146,7 +146,7 @@ const TechStacks = (props) => {
                                         <div className="carousel-item-name">{value.tech}</div>
                                         <div className="carousel-item-level">Level {value.level} </div>
                                         <div
-                                            className="carousel-item-experience">Experience: {prettifyDate(value.experienceFrom, value.experienceTo)}</div>
+                                            className="carousel-item-experience">Exposure: {prettifyDate(value.experienceFrom, value.experienceTo)}</div>
                                     </div>
                                     <div className="carousel-item-body"><span
                                         dangerouslySetInnerHTML={{__html: value.description}}/></div>

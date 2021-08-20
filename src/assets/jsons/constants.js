@@ -22,7 +22,7 @@ export const techStacks = [
         "secondary_color": "C6426E",
         "font_awesome_icon": faJava,
         "level": 8,
-        "description": "Have a strong understanding of Java 8 concepts and an excellent grasp of Java OOPS concepts. The multi-threading concept interests me greatly where it is a subject I've experimented with and worked on few projects. Have worked on Java GUI tools like Java swing and Java FX!",
+        "description": "I have a strong understanding of Java 8 concepts and an excellent grasp of Java OOPS. Multi-threading concepts have always intrigued me and it is a subject I have experimented greatly with. I’ve also worked on Java GUI tools like Java swing and Java FX!",
         "experienceFrom": "01/06/2018",
         "experienceTo": ""
     },
@@ -145,7 +145,7 @@ export const projectDict = [
         "title": "Personal Project",
         "duration": "2 weeks",
         "techs": "Python, Django, HTML5, CSS, JS, Django Template Language, ORM",
-        "description": "I believe in learning by practicing & experimenting as it is the easiest way to learn the tech deep & know the understand the bottlenecks. This was my first project in Django. It is an e-commerce website with a good frontend and optimized backend. Try not to find bugs in it ;)",
+        "description": "I believe in learning by practicing & experimenting as it is the easiest way to learn the tech deep & understand the bottlenecks. It was my first project in Django. An e-commerce website with a good frontend and optimized backend. Try not to find bugs in it ;)",
         "link": "https://github.com/Thejesh1698/E-Commerce-using-python-and-Django",
     },
     {
@@ -153,7 +153,7 @@ export const projectDict = [
         "title": "Personal Project",
         "duration": "4 days",
         "techs": "Python, Django, HTML5, CSS, jQuery, BeautifulSoup",
-        "description": "It is a scrapper(not crawler!!) that scrapes the medium.com for a given input tag. Have written a complex pagination logic in order the optimize the load time as crawling all the articles impacts the performance. Reach out to me if you wanna check it out. Always up for a crawling/scraping talk :)",
+        "description": "It is a scrapper(not crawler!!) that scrapes the medium.com for a given input tag. I have coded a complex pagination logic to optimize the load time as crawling all the articles in every request impacts the performance. Reach out to me if you want to check it out. Always up for a crawling/scraping talk :)",
         "link": "https://github.com/Thejesh1698/medium_crawler",
     },
     {
@@ -161,7 +161,7 @@ export const projectDict = [
         "title": "Internship Project",
         "duration": "2 months",
         "techs": "JavaFX, MySQL, and NLP",
-        "description": "It is both Menu based and keyword recognition chatbot. Its role is to fetch the relevant information from the complex website to the users in a go from the main page instead of them switching pages. It also does some DB queries to fetch office and user informations",
+        "description": "It is both a Menu and keyword recognition-based chatbot. Its role is to fetch the relevant information from a complex website so that the users don't have to switch between pages looking for answers. It also does some DB queries to fetch related pieces of information.",
         "link": "",
     },
     {
@@ -169,7 +169,7 @@ export const projectDict = [
         "title": "Internship Project",
         "duration": "6 months",
         "techs": "Java 8, Spring Boot, JSP, CSS",
-        "description": "This is a normal two-page application which provides the options to add, store & edit product information, fetch products in searching and add them to the cart. GST cost calculation for the cart is done dynamically.\n",
+        "description": "It is a basic two-page application that provides the options to add, store & edit product information, fetch products based on search, and a way to add products to the cart. GST calculation is calculated dynamically for a particular cart value.",
         "link": "https://github.com/Thejesh1698/GST-project",
     },
     {

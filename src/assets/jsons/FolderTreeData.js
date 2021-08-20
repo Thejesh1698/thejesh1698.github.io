@@ -13,7 +13,7 @@ const FolderTreeData = {
         "parent": "-1",
         "file_type": "folder",
         "font_awesome_icon": faFolderOpen,
-        "children": [1, 4, 10, 3],
+        "children": [4, 1, 10, 3],
     },
     1: {
         "key": "portfolio",

@@ -52,6 +52,10 @@ const Sidebar = (props) => {
         <div className="sidebar-wrapper">
             <div className="sidebar-main full-box">
                 {/*<div className="sidebar-header text-not-selectable">&#60; Portfolio Tree /&#62;</div>*/}
+                <div className="folder-tree-info">
+                    <div><FontAwesomeIcon icon={faInfoCircle}/> Single click to expand/collapse a folder!</div>
+                    <div><FontAwesomeIcon icon={faInfoCircle}/> Double click to select a file!</div>
+                </div>
                 <div className="folder-tree">
                     {(() => {
                         let tree_jsx = <></>;
@@ -103,10 +107,6 @@ const Sidebar = (props) => {
 
                         return <>{tree_jsx}</>;
                     })()}
-                </div>
-                <div className="folder-tree-info">
-                    <div><FontAwesomeIcon icon={faInfoCircle}/> Single click to expand/collapse a folder!</div>
-                    <div><FontAwesomeIcon icon={faInfoCircle}/> Double click to select a file!</div>
                 </div>
             </div>
         </div>
