@@ -301,5 +301,80 @@ a {
     .body-right-wing{
       width: 20%;
     }
+
+    .blog-body-footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Recoleta, serif;
+      font-size: 1.5rem;
+    }
+  }
+
+  .blog-footer-wrapper{
+    margin-top: 5rem;
+    .blog-footer{
+      height: 400px;
+      background: url("./../images/blogFooter.png") no-repeat right center;
+      background-size: cover;
+
+      & > div{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > div{
+          width: 80%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .blog-footer-name{
+            padding: 7rem 0 0 0;
+            font-size: 3rem;
+            //margin-right: 2rem;
+
+            & > div{
+              margin: 1rem 0 0 1rem;
+              font-size: 0.8rem;
+            }
+          }
+
+          .blog-footer-links{
+            padding: 7rem 0 0 0;
+            display: flex;
+            justify-content: center;
+
+            a{
+              display: block;
+              margin-bottom: 1rem;
+              color: black;
+            }
+          }
+
+          .blog-footer-social{
+            padding: 7rem 0 0 0;
+            display: flex;
+            justify-content: center;
+
+            a{
+              display: block;
+              margin-bottom: 1rem;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    .blog-footer-copyright{
+      font-family: Recoleta, serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
   }
 }

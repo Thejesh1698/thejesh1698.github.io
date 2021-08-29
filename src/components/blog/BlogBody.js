@@ -77,6 +77,7 @@ const BlogBody = () => {
         {blogArticles.length < 5 ? "" : null}
       </div>
       <div className="body-right-wing"/>
+      <div className="blog-body-footer full-width">More blogs will be out soon. Stay tuned! :)</div>
     </div>
   );
 }
