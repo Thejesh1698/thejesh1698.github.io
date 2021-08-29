@@ -1,6 +1,8 @@
 @import "./typography.css";
 @import "./animations.scss";
 @import "./constants.scss";
+@import "./util.scss";
+@import "./common.scss";
 
 /*----------initial page render css-*/
 .page-loader-wrapper {
@@ -244,54 +246,6 @@ a {
   position: absolute;
   z-index: 2;
   pointer-events: none;
-}
-
-/* -------- util classes ---------*/
-.full-width {
-  width: 100%;
-}
-
-.full-height {
-  height: 100%;
-}
-
-.full-box {
-  width: 100%;
-  height: 100%;
-}
-
-.display-none {
-  display: none;
-}
-
-.visibility-hidden {
-  visibility: hidden;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.green-border {
-  border: 2px solid green !important;
-}
-
-.red-border {
-  border: 2px solid red !important;
-}
-
-.input-success-info {
-  text-align: center;
-  color: green;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.input-error-info {
-  text-align: center;
-  color: #c12c2c;
-  font-size: 0.8rem;
-  font-weight: 700;
 }
 
 /* -------------------Main css-------- */
@@ -681,7 +635,7 @@ a {
   z-index: 0;
   display: flex;
   flex-direction: column;
-  height: 150%;
+  height: 120% !important;
 }
 
 .sidebar-editor {
@@ -830,6 +784,7 @@ a {
   float: left;
   width: 80%;
   height: 100%;
+  min-height: 730px;
   //background-image: linear-gradient(to top left, #fd154b 0%, #fa8f3d 150%);
 
   background-image: linear-gradient(to bottom, #9bd3cb, #129a7d);
@@ -1075,6 +1030,7 @@ a {
 
 
 /* --------Projects css-------------*/
+
 .horizontal-scroll-group {
   overflow-x: auto;
   padding: 8rem 8rem 2.5rem 3rem;
@@ -1950,29 +1906,6 @@ a {
     font-size: 13rem;
     z-index: 10;
     transform: skewY(-5deg);
-  }
-}
-
-
-/* --------Loaders css-------------*/
-.rocket-loader-outer {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .rocket-loader-wrapper {
-    overflow: hidden;
-    width: 80%;
-    height: 80%;
-
-    .body {
-      top: 40%;
-    }
-
-    .loader-text {
-      left: 10%;
-    }
   }
 }
 

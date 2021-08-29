@@ -1,0 +1,21 @@
+/* --------Loaders css-------------*/
+.rocket-loader-outer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .rocket-loader-wrapper {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+
+    .body {
+      top: 40%;
+    }
+
+    .loader-text {
+      left: 10%;
+    }
+  }
+}

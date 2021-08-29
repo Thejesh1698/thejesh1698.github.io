@@ -6,6 +6,7 @@ import MailForm from "./MailForm";
 import MobileConstruction from "../pages/MobileConstruction";
 import { ApolloProvider } from "@apollo/client";
 import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import './../css/style.scss'
 
 const client = new ApolloClient({
     cache: new InMemoryCache(),

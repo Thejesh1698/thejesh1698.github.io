@@ -18,7 +18,7 @@ const Editor = (props) => {
         "myStory": <MyStory/>
     }
     return (
-        <div className="editor-wrapper">
+        <div className="editor-wrapper full-height">
             <div className="editor-main full-box">
                 {props.currentTab !== undefined ? components_dict[props.currentTab] : null}
             </div>

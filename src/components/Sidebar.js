@@ -5,7 +5,6 @@ import {
     faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons'
 import getFolderTreeData from './../assets/jsons/FolderTreeData'
-import {OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 const Sidebar = (props) => {
 

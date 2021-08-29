@@ -6,11 +6,11 @@ const MyStory = (props) => {
         <div className="my-story-wrapper full-box">
             <div className="my-story-main">
                 <div className="watermark-quote my-story-quote-one" style={{
-                    top: "-4.5rem", left: "3rem", "-webkit-text-stroke-width": "2px",
+                    top: "-4.5rem", left: "3rem", WebkitTextStrokeWidth: "2px",
                     WebkitTextStrokeColor: "#9bd3cb"
                 }}>&#10075;</div>
                 <div className="watermark-quote my-story-quote-two" style={{
-                    top: "-5rem", left: "6.5rem", "-webkit-text-stroke-width": "2px",
+                    top: "-5rem", left: "6.5rem", WebkitTextStrokeWidth: "2px",
                     WebkitTextStrokeColor: "#9bd3cb"
                 }}>&#10075;</div>
                 <div className="my-story-inner full-box">

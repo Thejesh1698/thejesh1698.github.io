@@ -706,6 +706,13 @@ export const errorEmojis = {
     8: "\\(&#8728;_&#8728;)/",
 }
 
+export const happyEmojis = {
+    0: "(&#9900;&#8255;&#9900;)",
+    1: "(^&#8255;^)",
+    2: "(&#8728;&#8255;&#8728;)",
+    3: "(>&#8255;<)",
+}
+
 export function prettifyDate(firstDate, lastDate, dob = false) {
     let today = new Date();
     if (lastDate !== "") {
@@ -738,5 +745,48 @@ export function prettifyDate(firstDate, lastDate, dob = false) {
             return "1 year";
         }
         return years + " years";
+    }
+}
+
+export const pastelColours = {
+    0: {
+        "backgroundColour": "#FF94E9",
+        "textColor": "#AD0089"
+    },
+    1: {
+        "backgroundColour": "#FF8392",
+        "textColor": "#920012"
+    },
+    2: {
+        "backgroundColour": "#9BFFAB",
+        "textColor": "#007413"
+    },
+    3: {
+        "backgroundColour": "#96EDFF",
+        "textColor": "#006074"
+    },
+    4: {
+        "backgroundColour": "#FFFF9A",
+        "textColor": "#828200"
+    },
+    5: {
+        "backgroundColour": "#FFC39A",
+        "textColor": "#863600"
+    },
+    6: {
+        "backgroundColour": "#E4A7FF",
+        "textColor": "#5C0086"
+    },
+    7: {
+        "backgroundColour": "#A7FFE6",
+        "textColor": "#007C59"
+    },
+    8: {
+        "backgroundColour": "#B4AAFC",
+        "textColor": "#0F007C"
+    },
+    9: {
+        "backgroundColour": "#FCAAD7",
+        "textColor": "#800045"
     }
 }

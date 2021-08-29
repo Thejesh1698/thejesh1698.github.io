@@ -53,3 +53,24 @@
     url("../fonts/JetBrainsMonoItalic.ttf") format("truetype");
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "MerriweatherRegular";
+    src: local("MerriweatherRegular"),
+    url("../fonts/MerriweatherRegular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MerriweatherItalic";
+    src: local("MerriweatherItalic"),
+    url("../fonts/MerriweatherItalic.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MerriweatherLight";
+    src: local("MerriweatherLight"),
+    url("../fonts/MerriweatherLight.ttf") format("truetype");
+    font-weight: normal;
+}
