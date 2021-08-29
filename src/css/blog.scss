@@ -9,6 +9,25 @@ html, body, #___gatsby, #gatsby-focus-wrapper{
   height: 100%;
 }
 
+body {
+  background-color: #283255;
+}
+
+@media screen and (min-width: 1632px){
+  body {
+    background-color: #283255;
+
+    .blog-outer-wrapper{
+      margin: 50px auto;
+      border-radius: 10px;
+
+      .blog-nav{
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
 * {
   box-sizing: border-box;
   position: relative;
@@ -25,6 +44,10 @@ a {
 // blog main page css
 .blog-outer-wrapper{
   font-family: MerriweatherLight, serif;
+  background-color: white;
+  min-height: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .blog-header-wrapper{
     height: 800px;

@@ -7,7 +7,7 @@ import BlogFooter from "../components/blog/BlogFooter"
 const Blog = () => {
 
   return (
-    <div className="blog-outer-wrapper full-box">
+    <div className="blog-outer-wrapper full-width">
       <BlogHeader/>
       <BlogBody/>
       <BlogFooter/>
