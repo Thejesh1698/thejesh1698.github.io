@@ -52,7 +52,7 @@ a {
           justify-content: center;
           float: right;
           font-weight: bold;
-          font-size: 1.5rem;
+          font-size: 21px;
           font-family: Recoleta, serif;
           *{
             cursor: pointer;
@@ -94,7 +94,7 @@ a {
 
         .blog-header-emoji{
           font-size: 150px;
-          margin-bottom: 4rem;
+          margin-bottom: 56px;
           font-family: KaushanScript, serif;
           color: $pastel-dark-green;
         }
@@ -102,25 +102,24 @@ a {
         & > div:not(.blog-header-emoji){
           width: auto;
           text-align: center;
-          padding: 1rem;
+          padding: 14px;
           border-radius: 10px;
 
           .blog-header-title{
             display: block;
             font-size: 4rem;
-            margin-bottom: 1rem;
+            margin-bottom: 14px;
           }
 
           .blog-header-tags{
             font-size: 1.2rem;
-            margin-top: 2rem;
+            margin-top: 28px;
 
             .blog-header-tag{
               display: inline-flex;
-              margin-left: 0.5rem;
-              margin-right: 0.5rem;
+              margin: 0 7px;
               border-radius: 7px;
-              padding: 0.5rem;
+              padding: 7px;
               justify-content: center;
               align-items: center;
 
@@ -170,13 +169,13 @@ a {
   }
 
   .blog-body-wrapper{
-    margin-top: 3rem;
+    margin-top: 42px;
 
     .blog-body-header{
       height: 50px;
       text-align: center;
       font-size: 3rem;
-      margin: 1rem 0 2rem 0;
+      margin: 14px 0 28px 0;
       font-family: Recoleta, serif;
     }
 
@@ -200,7 +199,7 @@ a {
         height: 260px;
         background-color: #e9ebeb;
         border-radius: 10px;
-        margin-bottom: 1.5rem;
+        margin-bottom: 21px;
         color: black;
         transition: background-color ease-in-out .3s, box-shadow ease-in-out .3s, color ease-in-out .3s;
         display: flex;
@@ -212,7 +211,7 @@ a {
         }
 
         .blog-card-info{
-          padding: 1rem;
+          padding: 14px;
           width: 60%;
           display: inline-block;
 
@@ -222,7 +221,7 @@ a {
 
             .blog-card-tag{
               display: inline-flex;
-              margin-right: 0.5rem;
+              margin-right: 7px;
               border-radius: 5px;
               padding: 2.5px 10px;
               font-family: MerriweatherLight, serif;
@@ -233,13 +232,13 @@ a {
           .blog-card-header{
             font-size: 28px;
             font-weight: bold;
-            margin: 0.5rem 0 0.5rem 0;
+            margin: 7px 0 7px 0;
             font-family: Recoleta, serif;
           }
 
           .blog-card-description{
             font-size: 16px;
-            margin-bottom: 2rem;
+            margin-bottom: 28px;
             font-family: MerriweatherLight, serif;
             word-spacing: 3px;
             line-height: 1.5em;
@@ -251,8 +250,8 @@ a {
               background-color: #0164f5;
               border-radius: 20px;
               color: white;
-              padding: 0.5rem 1rem;
-              margin-right: 1rem;
+              padding: 7px 14px;
+              margin-right: 14px;
             }
             .blog-card-date{
               display: inline-flex;
@@ -312,7 +311,7 @@ a {
   }
 
   .blog-footer-wrapper{
-    margin-top: 5rem;
+    margin-top: 70px;
     .blog-footer{
       height: 400px;
       background: url("./../images/blogFooter.png") no-repeat right center;
@@ -331,36 +330,36 @@ a {
           align-items: center;
 
           .blog-footer-name{
-            padding: 7rem 0 0 0;
+            padding: 98px 0 0 0;
             font-size: 3rem;
             //margin-right: 2rem;
 
             & > div{
-              margin: 1rem 0 0 1rem;
+              margin: 14px 0 0 14px;
               font-size: 0.8rem;
             }
           }
 
           .blog-footer-links{
-            padding: 7rem 0 0 0;
+            padding: 98px 0 0 0;
             display: flex;
             justify-content: center;
 
             a{
               display: block;
-              margin-bottom: 1rem;
+              margin-bottom: 14px;
               color: black;
             }
           }
 
           .blog-footer-social{
-            padding: 7rem 0 0 0;
+            padding: 98px 0 0 0;
             display: flex;
             justify-content: center;
 
             a{
               display: block;
-              margin-bottom: 1rem;
+              margin-bottom: 14px;
               color: black;
             }
           }
@@ -374,7 +373,7 @@ a {
       justify-content: center;
       align-items: center;
       font-size: 1.2rem;
-      margin: 0.5rem 0;
+      margin: 7px 0;
     }
   }
 }
