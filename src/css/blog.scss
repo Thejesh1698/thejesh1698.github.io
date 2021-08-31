@@ -10,12 +10,12 @@ html, body, #___gatsby, #gatsby-focus-wrapper{
 }
 
 body {
-  background-color: #283255;
+  background-color: $blog-blue;
 }
 
 @media screen and (min-width: 1632px){
   body {
-    background-color: #283255;
+    background-color: $blog-blue;
 
     .blog-outer-wrapper{
       margin: 50px auto;
@@ -31,7 +31,6 @@ body {
 * {
   box-sizing: border-box;
   position: relative;
-  cursor: auto;
 }
 
 a {
@@ -48,6 +47,10 @@ a {
   min-height: 100%;
   max-width: 1440px;
   margin: 0 auto;
+
+  *{
+    cursor: auto;
+  }
 
   .blog-header-wrapper{
     height: 800px;
@@ -192,7 +195,7 @@ a {
   }
 
   .blog-body-wrapper{
-    margin-top: 42px;
+    padding-top: 42px;
 
     .blog-body-header{
       height: 50px;
@@ -275,6 +278,7 @@ a {
               color: white;
               padding: 7px 14px;
               margin-right: 14px;
+              cursor: pointer;
             }
             .blog-card-date{
               display: inline-flex;
@@ -334,7 +338,7 @@ a {
   }
 
   .blog-footer-wrapper{
-    margin-top: 70px;
+    padding-top: 70px;
     .blog-footer{
       height: 400px;
       background: url("./../images/blogFooter.png") no-repeat right center;
@@ -355,11 +359,10 @@ a {
           .blog-footer-name{
             padding: 98px 0 0 0;
             font-size: 3rem;
-            //margin-right: 2rem;
 
             & > div{
-              margin: 14px 0 0 14px;
-              font-size: 0.8rem;
+              margin: 14px 0 0 6px;
+              font-size: 12px;
             }
           }
 
@@ -368,10 +371,30 @@ a {
             display: flex;
             justify-content: center;
 
-            a{
-              display: block;
-              margin-bottom: 14px;
-              color: black;
+            & > div{
+              width: 90px;
+
+              a{
+                display: block;
+                margin-bottom: 14px;
+                color: black;
+                cursor: pointer;
+
+                svg{
+                  display: inline-block;
+                  float: right;
+                  opacity: 0;
+                  font-size: 20px;
+                }
+
+                &:hover{
+                  color: #0164f5;
+
+                  svg{
+                    opacity: 1;
+                  }
+                }
+              }
             }
           }
 
@@ -380,10 +403,30 @@ a {
             display: flex;
             justify-content: center;
 
-            a{
-              display: block;
-              margin-bottom: 14px;
-              color: black;
+            & > div {
+              width: 90px;
+
+              a{
+                display: block;
+                margin-bottom: 14px;
+                color: black;
+                cursor: pointer;
+
+                svg{
+                  display: inline-block;
+                  float: right;
+                  opacity: 0;
+                  font-size: 20px;
+                }
+
+                &:hover{
+                  color: #0164f5;
+
+                  svg{
+                    opacity: 1;
+                  }
+                }
+              }
             }
           }
         }

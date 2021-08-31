@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import blogHeaderImage from "./../../images/blogMainPageImage.jpg"
 import { errorEmojis, happyEmojis } from "../../assets/jsons/constants"
 
-const BlogHeader = () => {
+const BlogHeader = (props) => {
 
   return (
     <div className="blog-header-wrapper full-width">
@@ -14,7 +14,7 @@ const BlogHeader = () => {
           </div>
         </div>
       </div>
-      <div className="blog-header full-box">
+      {props.onlyNav ? null : <div className="blog-header full-box">
         <div className="blog-header-text full-height">
           <div className="blog-header-emoji"
                dangerouslySetInnerHTML={{__html: happyEmojis[2]}}/>
@@ -31,7 +31,7 @@ const BlogHeader = () => {
         <div className="blog-header-image full-height">
           <div className="full-box"/>
         </div>
-      </div>
+      </div>}
     </div>
   );
 }

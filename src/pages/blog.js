@@ -1,18 +1,12 @@
-import React  from "react"
-import './../css/blog.scss'
-import BlogHeader from "../components/blog/BlogHeader"
-import BlogBody from "../components/blog/BlogBody"
-import BlogFooter from "../components/blog/BlogFooter"
+import React from "react"
+import { Router } from "@reach/router"
+import BlogLanding from "../components/blog/BlogLanding"
+import BlogPost from "../components/blog/BlogPost"
 
-const Blog = () => {
-
-  return (
-    <div className="blog-outer-wrapper full-width">
-      <BlogHeader/>
-      <BlogBody/>
-      <BlogFooter/>
-    </div>
-  );
-}
-
-export default Blog;
+const Blog = () => (
+  <Router>
+    <BlogLanding path="/blog/" />
+    <BlogPost path="/blog/:name/" />
+  </Router>
+)
+export default Blog
