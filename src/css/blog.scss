@@ -61,7 +61,7 @@ a {
       position: absolute;
       top: 0;
       height: 80px;
-      z-index: 1;
+      z-index: 5;
 
       .blog-nav{
         background-image: linear-gradient(to bottom, #A2DBFA, #CCF2F4, transparent);
@@ -178,18 +178,19 @@ a {
           background-size: cover;
         }
 
-        //&:before {
-        //  pointer-events: none;
-        //  content: "";
-        //  position: absolute;
-        //  z-index: 3;
-        //  height: 100%;
-        //  top: 0;
-        //  width: 50%;
-        //  background: linear-gradient(
-        //                  -90deg
-        //          ,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.013) 8.1%,hsla(0,0%,100%,.049) 15.5%,hsla(0,0%,100%,.104) 22.5%,hsla(0,0%,100%,.175) 29%,hsla(0,0%,100%,.259) 35.3%,hsla(0,0%,100%,.352) 41.2%,hsla(0,0%,100%,.45) 47.1%,hsla(0,0%,100%,.55) 52.9%,hsla(0,0%,100%,.648) 58.8%,hsla(0,0%,100%,.741) 64.7%,hsla(0,0%,100%,.825) 71%,hsla(0,0%,100%,.896) 77.5%,hsla(0,0%,100%,.951) 84.5%,hsla(0,0%,100%,.987) 91.9%,#fff);
-        //}
+        &:before {
+          pointer-events: none;
+          content: "";
+          position: absolute;
+          z-index: 1;
+          height: 100%;
+          top: 0;
+          width: 10%;
+          left: -8px;
+          background: linear-gradient(
+                          -90deg
+                  ,hsla(0,0%,100%,0) 0,hsla(0,0%,100%,.013) 8.1%,hsla(0,0%,100%,.049) 15.5%,hsla(0,0%,100%,.104) 22.5%,hsla(0,0%,100%,.175) 29%,hsla(0,0%,100%,.259) 35.3%,hsla(0,0%,100%,.352) 41.2%,hsla(0,0%,100%,.45) 47.1%,hsla(0,0%,100%,.55) 52.9%,hsla(0,0%,100%,.648) 58.8%,hsla(0,0%,100%,.741) 64.7%,hsla(0,0%,100%,.825) 71%,hsla(0,0%,100%,.896) 77.5%,hsla(0,0%,100%,.951) 84.5%,hsla(0,0%,100%,.987) 91.9%,#fff);
+        }
       }
     }
   }
