@@ -291,33 +291,41 @@ a {
           width: 40%;
           height: 250px;
           display: inline-block;
-          background-position: 100% 0%;
           background-repeat: no-repeat;
-          background-size: auto 250px;
         }
 
         &:nth-child(1){
           .blog-card-decoration {
             background-image: url("./../images/blogArticleDecoration1.png");
+            background-position: 100% 0%;
+            background-size: auto 250px;
           }
         }
         &:nth-child(2){
           .blog-card-decoration {
-            background-image: url("./../images/blogArticleDecoration1.png");
+            background-image: url("./../images/blogArticleDecoration2.png");
+            background-position: -50% 50%;
+            background-size: auto 350px;
           }
         }
         &:nth-child(3){
           .blog-card-decoration {
-            background-image: url("./../images/blogArticleDecoration1.png");
+            background-position: 150% 50%;
+            background-size: auto 400px;
+            background-image: url("./../images/blogArticleDecoration3.png");
           }
         }
         &:nth-child(4){
           .blog-card-decoration {
+            background-position: 100% 0%;
+            background-size: auto 250px;
             background-image: url("./../images/blogArticleDecoration1.png");
           }
         }
         &:nth-child(5){
           .blog-card-decoration {
+            background-position: 100% 0%;
+            background-size: auto 250px;
             background-image: url("./../images/blogArticleDecoration1.png");
           }
         }

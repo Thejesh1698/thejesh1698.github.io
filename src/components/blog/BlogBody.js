@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock as farClock } from "@fortawesome/free-regular-svg-icons"
 import { pastelColours } from "../../assets/jsons/constants"
 import RocketLoader from "../Loaders/RocketLoader"
+import { Link } from "gatsby"
 
 const BlogBody = () => {
 
@@ -64,9 +65,7 @@ const BlogBody = () => {
                     <div className="blog-card-header full-width">{article.blogHeader}</div>
                     <div className="blog-card-description full-width">{article.blogDescription}</div>
                     <div className="blog-card-footer full-width">
-                      <a className="blog-card-button" href={"/blog/post/" + article.blogHeader.split(' ').join('_')} target="_blank">
-                        Read Full Post
-                      </a>
+                      <Link className="blog-card-button"  to={"/blog/post/" + article.blogHeader.split(' ').join('_')}>Read Full Post</Link>
                       <div className="blog-card-date"><FontAwesomeIcon icon={farClock} />&nbsp;&nbsp;{article.blogDate}
                       </div>
                     </div>
