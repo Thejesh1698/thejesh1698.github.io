@@ -9,7 +9,7 @@ const BlogPost = (props) => {
   return (
     <div className="blog-post-wrapper full-width">
       <BlogHeader onlyNav={true}/>
-      <BlogPostBody blogName={props.name}/>
+      <BlogPostBody blogName={props.name.split('_').join(' ')}/>
       <BlogFooter/>
     </div>
   );

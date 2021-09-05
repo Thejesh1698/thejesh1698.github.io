@@ -64,7 +64,9 @@ const BlogBody = () => {
                     <div className="blog-card-header full-width">{article.blogHeader}</div>
                     <div className="blog-card-description full-width">{article.blogDescription}</div>
                     <div className="blog-card-footer full-width">
-                      <a className="blog-card-button" href={"/blog/" + article.blogHeader}>Read Full Post</a>
+                      <a className="blog-card-button" href={"/blog/post/" + article.blogHeader.split(' ').join('_')} target="_blank">
+                        Read Full Post
+                      </a>
                       <div className="blog-card-date"><FontAwesomeIcon icon={farClock} />&nbsp;&nbsp;{article.blogDate}
                       </div>
                     </div>

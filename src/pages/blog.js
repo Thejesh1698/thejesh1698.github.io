@@ -5,8 +5,8 @@ import BlogPost from "../components/blog/BlogPost"
 
 const Blog = () => (
   <Router>
-    <BlogLanding path="/blog/" />
-    <BlogPost path="/blog/:name/" />
+    <BlogLanding path="/blog/"/>
+    <BlogPost path="/blog/post/:name" />
   </Router>
 )
 export default Blog
