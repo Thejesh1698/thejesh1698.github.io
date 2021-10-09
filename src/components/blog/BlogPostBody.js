@@ -15,7 +15,7 @@ const BlogPostBody = (props) => {
           <div className="blog-post-emoji-text full-box">
             Oopsy! You found them working :P<br /><br />
             These little things want to promise you that this post will be ready and live by
-            <span className="font-italic"> Sept 15, 2021.</span>
+            <span className="font-italic"> Oct 15, 2021.</span>
             <br /><br />
             Keep visiting them before they go back to their planet :P
           </div>

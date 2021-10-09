@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState, useCallback} from "react";
 import {techStacks, prettifyDate} from "../assets/jsons/constants";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons"
 
 const TechStacks = (props) => {
 
@@ -26,6 +27,12 @@ const TechStacks = (props) => {
         carouselGroupRef.current.addEventListener('wheel', carouselScroll);
         carouselGroupRef.current.addEventListener('touchstart', touchPadScrollStart);
         carouselGroupRef.current.addEventListener('touchend', touchPadScrollEnd);
+
+        window.addEventListener("keydown", keyDownHandler);
+
+        return () => {
+            window.removeEventListener("keydown", keyDownHandler);
+        };
 
         // return () => {
         //     carouselGroupRef.current.removeEventListener('wheel', carouselScroll, { passive: false });
@@ -95,17 +102,21 @@ const TechStacks = (props) => {
     }
 
     const carouselScrollUp = () => {
-        currentTechRef.current = currentTechRef.current - 1;
-        setCurrentTech(currentTechRef.current);
-        scrollDirectionRef.current = false;
-        setScrollDirection(scrollDirectionRef.current);
+        if(currentTechRef.current > 1){
+            currentTechRef.current = currentTechRef.current - 1;
+            setCurrentTech(currentTechRef.current);
+            scrollDirectionRef.current = false;
+            setScrollDirection(scrollDirectionRef.current);
+        }
         // changeBackgroundColour(techStacks[currentTechRef.current-1].primary_color, techStacks[currentTechRef.current-1].secondary_color);
     }
 
     const carouselScrollDown = () => {
-        currentTechRef.current = currentTechRef.current + 1;
-        setCurrentTech(currentTechRef.current);
-        scrollDirectionRef.current = true;
+        if(currentTechRef.current < Object.keys(techStacks).length){
+            currentTechRef.current = currentTechRef.current + 1;
+            setCurrentTech(currentTechRef.current);
+            scrollDirectionRef.current = true;
+        }
         // changeBackgroundColour(techStacks[currentTechRef.current-1].primary_color, techStacks[currentTechRef.current-1].secondary_color);
     }
 
@@ -116,10 +127,26 @@ const TechStacks = (props) => {
     //     });
     // }
 
+    const keyDownHandler = (e) => {
+        switch (e.keyCode) {
+            case 37:
+                carouselScrollUp()
+                break;
+            case 39:
+                carouselScrollDown()
+                break;
+        }
+    }
+
     return (
         <div className="tech-stacks-wrapper full-box"
              // style={{backgroundImage: hoveredStack ? "linear-gradient(to bottom right, #" + hoveredStack.primary_color + ", #fd154b )" : "inherit"}}
             >
+            <div className="tech-stacks-header full-width">
+                <div><FontAwesomeIcon icon={faInfoCircle}/> You can navigate using swipes if you are using a touchpad! (Give small swipes to naivgate single card)</div>
+                <div><FontAwesomeIcon icon={faInfoCircle}/> You can navigate using mouse wheel if you are using a mouse!</div>
+                <div><FontAwesomeIcon icon={faInfoCircle}/> You can even use left and right arrow keys to navigate!</div>
+            </div>
             <div className="tech-stacks-main full-box">
                 <div className="carousel-wrapper full-box" ref={carouselWrapperRef}>
                     <div className="carousel-group scrollContainer" ref={carouselGroupRef}>

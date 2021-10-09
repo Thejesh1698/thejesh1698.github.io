@@ -1,9 +1,16 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faClock as farClock } from "@fortawesome/free-regular-svg-icons"
 import { pastelColours } from "../../assets/jsons/constants"
 import RocketLoader from "../Loaders/RocketLoader"
 import { Link } from "gatsby"
+import {
+  faFacebookF,
+  faGoogle,
+  faLinkedinIn,
+  faTwitter
+} from "@fortawesome/free-brands-svg-icons"
+import { faCopy, faLink } from "@fortawesome/free-solid-svg-icons"
 
 const BlogBody = () => {
 
@@ -53,7 +60,7 @@ const BlogBody = () => {
                         return (
                           <div className="blog-card-tag" key={article.blogId + index}
                                style={{
-                                 "background-color": pastelColours[(article.blogId + index) % 10].backgroundColour,
+                                 "backgroundColor": pastelColours[(article.blogId + index) % 10].backgroundColour,
                                  "border": "1px solid " + pastelColours[(article.blogId + index) % 10].textColor
                                }}
                           >
@@ -65,7 +72,8 @@ const BlogBody = () => {
                     <div className="blog-card-header full-width">{article.blogHeader}</div>
                     <div className="blog-card-description full-width">{article.blogDescription}</div>
                     <div className="blog-card-footer full-width">
-                      <Link className="blog-card-button"  to={"/blog/post/" + article.blogHeader.split(' ').join('_')}>Read Full Post</Link>
+                      <Link className="blog-card-button" to={"/blog/post/" + article.blogHeader.split(" ").join("_")}>Read
+                        Full Post</Link>
                       <div className="blog-card-date"><FontAwesomeIcon icon={farClock} />&nbsp;&nbsp;{article.blogDate}
                       </div>
                     </div>
@@ -77,11 +85,34 @@ const BlogBody = () => {
           </>
         }
       </div>
-      <div className="body-right-wing" />
+      {blogSocialSideBar()}
       {blogArticles.length < 5 ?
         <div className="blog-body-footer full-width">More blogs will be out soon. Stay tuned! :)</div> : null}
     </div>
   )
+}
+
+const blogSocialSideBar = () => {
+  return (
+    <div className="body-right-wing">
+      <div className="blog-sidebar-social-wrapper">
+        <div className="blog-sidebar-social full-width">
+          <a><FontAwesomeIcon icon={faTwitter} /></a>
+        </div>
+        <div className="blog-sidebar-social full-width">
+          <a><FontAwesomeIcon icon={faFacebookF} /></a>
+        </div>
+        <div className="blog-sidebar-social full-width">
+          <a><FontAwesomeIcon icon={faLinkedinIn} /></a>
+        </div>
+        <div className="blog-sidebar-social full-width">
+          <a><FontAwesomeIcon icon={faGoogle} /></a>
+        </div>
+        <div className="blog-sidebar-social full-width">
+          <a><FontAwesomeIcon icon={faLink} /></a>
+        </div>
+      </div>
+    </div>)
 }
 
 export default BlogBody

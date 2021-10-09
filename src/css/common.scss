@@ -19,3 +19,90 @@
     }
   }
 }
+
+.blog-sidebar-social-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .blog-sidebar-social {
+    font-size: 24px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    * {
+      color: black;
+    }
+
+    a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      &:hover {
+        animation: jello 2s forwards 0s;
+
+        path{
+          fill: white;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      animation: zoomInRight 2s forwards 0.2s;
+
+      a {
+        &:hover {
+          background-color: rgb(96, 163, 217);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      animation: zoomInRight 2s forwards 0.4s;
+
+      a {
+        &:hover {
+          background-color: rgb(255, 105, 97);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      animation: zoomInRight 2s forwards 0.6s;
+
+      a {
+        &:hover {
+          background-color: rgb(119, 221, 119);
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      animation: zoomInRight 2s forwards 0.8s;
+
+      a {
+        &:hover {
+          background-color: rgb(207, 207, 196);
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      animation: zoomInRight 2s forwards 1s;
+
+      a {
+        &:hover {
+          background-color: rgb(177, 156, 217);
+        }
+      }
+    }
+  }
+}
